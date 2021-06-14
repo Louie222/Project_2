@@ -1,0 +1,37 @@
+{{!-- Everything to do with navbar function --}}
+
+<nav class="navbar has-shadow is-white">
+<!-- Logo/brand -->
+    <div class="navbar-brand">
+    <a class="navbar-item">
+    <img src="images/Logo1.png" alt ="Giggles and Food" style="max-height:90px" class="py -2 px-2">
+    </a>
+    <!-- for hamburger menu -->
+    <a class="navbar-burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    </a>
+    </div>
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end"></div>
+        <a href="/#home" class="navbar-item">Home</a>
+        <a  href="/#aboutUs"class="navbar-item">About us</a>
+        <a  href="/#gallery"class="navbar-item">Gallery</a>
+        <a  href="/#contact"class="navbar-item">Contact</a>
+        {{#unless loggedIn}}
+        <a id="button" class="navbar-item">Sign Up</a>
+        <a href="/login" class="navbar-item">Log In</a>
+        {{/unless}}
+        {{#if loggedIn}}
+            <a id="logout" class="navbar-item">Log Out</a>
+        {{/if}}
+    </div>
+    </div>
+</nav>
+
+    
+<script src="/javascripts/logout.js"></script>
+<script src="/javascripts/signup.js"></script>

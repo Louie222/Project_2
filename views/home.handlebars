@@ -1,0 +1,358 @@
+
+ <!-- Home- Giggles and Food -->
+    <section id="home" class="section">
+        <div class="container box">
+        <div class= "columns is-vcentered is-multiline">
+        <div class="column is- is-3-desktop ">
+        <h1 class="is-size-3-mobile is-size-1-desktop is-size-6-tablet title">Giggles and Food</h1>
+        <p> Keep abreast with information about restaurants with play equipments around the Perth area.
+            Our team of developers predicted an increase in the demand on such restaurants once the 2020 pandemic
+            reached phase four. Choose restaurants that have play equipment. Watch children play, eat and relax while you wait for your meal or are simply enjoying time with your loved ones. Our application let's you choose these restaurants and help plan your trip. Let us reconnect back to people. </p>
+        </div>
+        <div class="column mt-6">
+            <img src="images/Familymeals.jpg">
+        </div>
+        </div>
+        </div>
+    
+        
+
+<!-- Dad Joke -->
+<div class="section">
+  <div class="container box is-fluid">
+  <div class= "column is -8 is-variable">
+  <div class="is-7-tablet has-text-centered">
+    <h3  class="is-size-4 mb-4 title"> A Giggle a Day </h3>
+    
+    <div id></div>
+        <p id=jokeBtn class="jokeInput">A giggle a day</p>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+{{!-- search engine --}}
+<nav class="panel">
+  <p class="panel-heading">
+    Find Resturants
+  </p>
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input class="input" type="text" placeholder="Search">
+       
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+  <p class="panel-tabs">
+    <a class="is-active">All</a>
+    <a>North of River</a>
+    <a>South of River</a>
+    <a>City and CBD</a>
+    <a> East/Hills</a>
+    <a>Swan Valley</a>
+    <a>Mandurah And Surroundings </a>
+
+  </p>
+  
+  <label class="panel-block">
+    <input type="checkbox">
+    remember me
+  </label>
+  <div class="panel-block">
+    <button class="button is-link is-outlined is-fullwidth">
+      Reset all filters
+    </button>
+  </div>
+</nav>
+
+
+<!-- Gallery -->
+<div id="gallery" class="section">
+  <div class="container box">
+  <div class= "column is -8 is-variable">
+  <div class="is-7-tablet has-text-centered">
+  <h3 id="aboutUs" class="is-size-4 mb-4 title"> Gallery </h3>
+  <p class="mb-4 has-text-centered">Here are a list of Resturants. Let the fun begin!.</p>
+  </div>
+
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Sort Order</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>View List</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      <a href="#" class="dropdown-item">
+        Sort Order
+      </a>
+      <a href="#" class="dropdown-item">
+        Sort By
+      </a>
+      <a href="#" class="dropdown-item">
+        Date Added
+      </a>
+      <a href="#" class="dropdown-item">
+        A-Z
+      </a>
+    </div>
+  </div>
+</div>  
+
+      {{!-- List of restaurants --}}
+ {{#each restaurants as |restaurant|}}
+        {{>restaurant-card restaurant}}
+        {{/each}}
+        
+      
+
+        {{!-- <section  id="imageGallery" class="columns is-multiline">
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/300Acres.jpeg" alt="Outdoor play equipment at 300 Acres Restaurant & Bar">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://spicesgroup.com.au/300-acres/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">300 Acres Restaurant & Bar</p></a></span>
+            </div>
+          </div>
+        </div>
+    
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/CambridgeFoodCourt.jpeg" alt="Indoor play equipment at the Cambridge food Court">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://www.cambridgeforum.com.au/" target="_blank"> <p class="has-text-black has-background-warning has-text-centered">Cambridge International Food Court</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/CarineGladesTavern.jpeg" alt="Outdoor slide and play equipment at Carine Glades Tavern">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://www.thecarine.com.au/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">The Carine</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/CrookedCarrot.webp" alt="Outdoor play equipment at the Crooked Carrot">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://www.crookedcarrot.com.au/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">The Crooked Carrot</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/GoldenCloudSpur-Mandurah-jpeg.jpeg" alt="Indoor play equipment at the Golden Spur">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://www.spurgroup.com.au/restaurant/perth/mandurah" target="_blank"><p class="has-text-black has-background-warning is-transparent has-text-centered">Golden Spur</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/Masonmill.jpeg" alt="Outdoor slide and play equipment at Masonmill Gardens">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://masonmillgardens.com.au/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">Masonmill Gardens</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/SienaLeederville.jpeg" alt="Indoor play equipment at Siena's">
+            </figure>
+            <div class="container-content is-overlay">
+              <a src="https://sienasleederville.com/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">Siena's</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/StickbeaksCafe.jpeg" alt="Outdoor play equipment ay Sticky Beaks">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://stickybeakscafe.com.au/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">Stickybeaks CafÃ©</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/QuarterAcreHotel.png" alt="Child playing with toys in outdoor sandpit at The Quarter Acre Hotel">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://www.quarteracrehotel.com.au/" target="_blank"> <p class="has-text-black has-background-warning has-text-centered">The Quarter Acre</p></a>
+            </div>
+          </div>
+        </div>
+          <div class="column is-one-quarter">
+            <div class="container">
+            <figure class="image is-3by2">
+              <img src="images/SynergyParklandsKingsParkPlaygrounds.jpeg" alt="Out door play equipment">
+            </figure>
+            <div class="container-content is-overlay">
+              <a href="https://www.cambridgeforum.com.au/" target="_blank"><p class="has-text-black has-background-warning has-text-centered">Zamia Cafe</p></a>
+            </div>
+          </div>
+        </div>
+        </section> 
+        <div class="field is-horiztonal">
+        <div class="field-label is-normal">
+        </div>
+        </div> --}}
+         <!-- Reviews -->
+         <!-- <div class="field is-horizontal">
+          <div class="field-label is-normal">
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" placeholder="Name">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Restaurant</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-narrow">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select class="restaurantChoices">
+                    <option value="300 Acres Restaurant & Bar">300 Acres Restaurant & Bar</option>
+                    <option value="Cambridge International Food Court">Cambridge International Food Court</option>
+                    <option value="The Carine">The Carine</option>
+                    <option value="The Crooked Carrot">The Crooked Carrot</option>
+                    <option value="Golden Spur">Golden Spur</option>
+                    <option value="Masonmill Gardens">Masonmill Gardens</option>
+                    <option value="Siena's Leederville">Siena's Leederville</option>
+                    <option value="Sticky Cafe">Sticky Cafe</option>
+                    <option value="The Quarter Acre">The Quarter Acre</option>
+                    <option value="Zamia Cafe">Zamia Cafe</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="section">
+          <div class="container ">
+          <div class= "column is -8 is-variable">
+          <div class="is-7-tablet has-text-centered">
+        <h3 class="content is-centered is-size-4 mb-4 title"> Reviews </h3>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Review</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <textarea id="reviewInputText" class="textarea" placeholder="Type your review here"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="field is-horizontal">
+          <div class="field-label">
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <button class="button is-warning">
+                  Add review
+                </button>
+              </div>
+              <div id="message"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews"><div class= "column is -8 is-variable">
+          <div class="is-7-tablet has-text-centered">
+            <h3 class="is-size-4 mb-4 title"> View your past reviews</h3>
+          <ul class="reviewList">
+  
+          </ul>
+          
+        </div>
+    
+        
+  <!-- Map -->
+  <div class= "column is -8 is-variable">
+  <div class="is-7-tablet has-text-centered">
+    <h3 class="is-size-4 mb-4 title"> Locations </h3>
+ 
+    <div id="map"></div>
+<br>
+
+<!-- About us section -->
+        <div class="section">
+        <div class="container box">
+        <div class= "column is -8 is-variable">
+        <div class="is-7-tablet has-text-centered">
+        <h3 id="aboutUs" class="is-size-4 mb-4 title"> About Us </h3>
+        <p class="mb-4 has-text-centered">Hi! We are three young Web Developers, who have made this app just for you. The Giggles and Food application has been made keeping families, guardians and care takers, of young children in mind. We want family outings, catch ups, play dates to be extra fun.</p>
+        </div>
+       </section>
+        </section>
+
+<!-- Contact -->
+<div class="section">
+  <div class="container">
+  <div class= "column is -8 is-variable">
+  <div class="is-7-tablet has-text-centered">
+        <h3 id="contact" class="is-size-4 mb-4 title"> Contact </h3>
+        <p class="mb-4 has-text-centered"> We are parent community focused and love all feedback. If you know of a restaurant with play equipment we want to here from you.</p>
+      </div>
+      <div class="columns is-centered">
+        <p>Email: ellosh@wemadeit.com</p>
+       </div>
+  </div>
+  </div>
+  </div>
+
+
+  <!-- Footer -->
+    <footer class= â€œfooterâ€>
+      <div class="content has-text-centered">
+          <p>Copyright 2021 Giggles and Food</p>
+      </div>
+  </footer>
+
+
+        
