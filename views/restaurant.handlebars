@@ -1,74 +1,70 @@
+{{!-- Review Format --}}
+
 <div class="box">
- <div class="content">
-  <h1>{{restaurant.name}}</h1>
-  
-  <h6>Sixth level</h6>
-  <p>{{restaurant.description}}</p>
+  <div class="content">
+    <h1>{{restaurant.name}}</h1>
+    <p>{{restaurant.description}}</p>
+    
+  <p>Check out <a href="http://{{restaurant.url}}" target="_blank" rel="noopener noreferrer">{{restaurant.name}}</a></p>
+  </div>
+
 </div>
-</div>
 
-<article class="media">
-  
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Barbara Middleton</strong>
-        <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
-        <br>
-        <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-      </p>
-    </div>
 
-    <article class="media">
-      <div class="media-content">
-        <div class="content">
+<div class="column is -8 is-variable">
+  <div class="is-7-tablet has-text-centered">
+    <h3 class="is-size-4 mb-4 title"> Location </h3>
+  </div>
+
+
+
+  {{#each restaurant.reviews as |review|}}
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <div class="box">
           <p>
-            <strong>Sean Brown</strong>
+            <strong>{{review.user.username}}</strong>
             <br>
-            Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
+            {{review.review_content}}
             <br>
-            <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-          </p>
-        </div>
-
-        <article class="media">
-          Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
-        </article>
-
-        <article class="media">
-          Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
-        </article>
-      </div>
-    </article>
-
-    <article class="media">
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong>Kayli Eunice </strong>
-            <br>
-            Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
-            <br>
-            <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+            
           </p>
         </div>
       </div>
-    </article>
-  </div>
+    </div>
+  </article>
+  {{/each}}
+
+  {{!-- Review Form Section --}}
+  <article class="media">
+
+    <div class="media-content">
+      <form class="review-form">
+        <div class="field">
+          <div class="box">
+            <p class="control">
+              <textarea id="review-content" class="textarea" placeholder="Add a review..."></textarea>
+            </p>
+          </div>
+        </div>
+        <input type="hidden" id="restaurant-id" name="restaurantId" value={{restaurant.id}}>
+        <div class="field">
+          <div class="box">
+            {{#if loggedIn}}
+            <p class="control">
+              <button class="button" type="submit">Post comment</button>
+            </p>
+            {{/if}}
+            {{#unless loggedIn}}
+            <span> <a href="/login">Login</a> or <a href="/signup">Signup</a> to Post Reviews</span>
+            {{/unless}}
+          </div>
+
+        </div>
+      </form>
+    </div>
+</div>
 </article>
 
-<article class="media">
-  <div class="media-content">
-    <div class="field">
-      <p class="control">
-        <textarea class="textarea" placeholder="Add a comment..."></textarea>
-      </p>
-    </div>
-    <div class="field">
-      <p class="control">
-        <button class="button">Post comment</button>
-      </p>
-    </div>
-  </div>
-</article>
+<script src="/javascripts/review.js"></script>

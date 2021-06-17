@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Restaurant } = require('../models');
+const { Restaurant, Review, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -17,12 +17,40 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/restaurant/:id', async (req, res) => {
+  try {
+    const restaurantData = await Restaurant.findOne({
+      include: [
+        { model: Review, include: [{ model: User, attributes: ["username"] }] }
+      ],
+      where: { id: req.params.id }
+    });
+    const restaurant = restaurantData.toJSON();
+    console.log(restaurant);
+    res.render('restaurant', {
+      loggedIn: req.session.loggedIn,
+      restaurant: restaurant
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
   } else {
     res.render('login');
+  }
+});
+
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  } else {
+    res.render('signup');
   }
 });
 
