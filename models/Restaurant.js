@@ -38,6 +38,16 @@ Restaurant.init(
     description: {
       type: DataTypes.TEXT('long'),
       allowNull: false,
+    },
+
+    imgUrl: {
+      type: DataTypes.STRING,
+      allowNull: true ,
+    },
+
+    mapslatlong: {
+      type: DataTypes.STRING,
+      allowNull: true ,
     }
   },
   {

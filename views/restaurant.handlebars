@@ -15,6 +15,8 @@
   <div class="is-7-tablet has-text-centered">
     <h3 class="is-size-4 mb-4 title"> Location </h3>
   </div>
+  {{!-- Maps --}}
+<div id="restaurant-map"></div><br>
 
 
 
@@ -66,5 +68,10 @@
     </div>
 </div>
 </article>
-
+<input type="hidden" id="restaurantlatlng" name="restaurantlatlng" value={{restaurant.mapslatlong}}>
 <script src="/javascripts/review.js"></script>
+<script src="/javascripts/map.js"></script>
+<script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAJzW0fLgmyURc6n8p9tzpzcd7MOSiNyA&callback=initRestaurantMap&libraries=&v=weekly"
+      async
+    ></script>
