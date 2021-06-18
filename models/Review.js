@@ -22,14 +22,18 @@ Review.init({
             key: 'id'
         }
     },
-    restaurant_id: {
+   restaurant_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: 'restaurant',
             key: 'id'
-        }
+        },
+    },
+    star_rating: {
+        type: DataTypes.INTEGER
     }
+    
 
 }, {
     sequelize,

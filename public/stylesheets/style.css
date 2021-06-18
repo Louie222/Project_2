@@ -3,9 +3,6 @@
   width: 100%;
 }
 
-div.columns {
-  margin-top: 80px;
-}
 
 .buttons {
   margin-top: 15px;
@@ -41,4 +38,35 @@ input {
 
 a {
   font-weight: 600;
+}
+/* for star ratings */
+.stars{
+  display: flex;
+}
+
+.stars.disabled {
+  pointer-events: none;
+}
+
+.stars a {
+  opacity: 50%;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.stars:hover a{
+  opacity: 100%;
+
+}
+
+.stars a:hover{
+  opacity: 100%;
+}
+
+.stars a:hover ~ a{
+  opacity: 50%;
+}
+
+.stars a.active {
+  opacity: 100%;
 }

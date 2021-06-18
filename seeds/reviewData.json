@@ -1,0 +1,91 @@
+[
+  {
+    "review_content": "Awesome place, can easily spend 2 or more hours with kids, played mini golf, nice restaurant with a view, bit biased for kids if you want to eat inside with kids, lovely menu, french garden was closed and no notification online, pond with lots of fishes. Great place to take pictures, lovely and secure kids playground. Must visit with the whole family.",
+    "user_id": 1,
+    "restaurant_id": 1,
+    "star_rating": 5
+  },
+
+  {
+    "review_content": "Our all time favourite place to go and enjoy food and feed the fishes there,our favourite thing to do.There is a mini golf area for kids too and much more ",
+    "user_id": 2,
+    "restaurant_id": 1
+  },
+
+  {
+    "review_content": "Lovely spot in the hills, has a restaurant and casual outdoor   seating surrounded by beautiful rose gardens. There is also a fenced small play area for the kids and an 18 hole mini golf course. The Grandies loved feeding the fish, there are hundreds of them all fighting to get the food! Great place for a special dinner or lunch or just for a snack.",
+    "user_id": 3,
+    "restaurant_id": 1
+  },
+
+  {
+    "review_content": "Good place to eat ,kids  loved the  play aread and food and watched the beautiful koi fish pond",
+    "user_id": 4,
+    "restaurant_id": 2
+  },
+
+  {
+    "review_content": "We, my wife, 2 toddlers and myself went on a rainy day in June. Food was excellent, slow service. Kids loved the play area.",
+    "user_id": 5,
+    "restaurant_id": 2
+  },
+
+  {
+    "review_content": "My family (5 kids and my husband) and I went here for my birthday meal and LOVED it! However, we went after the renovation and I’m pretty sure the rest of the reviews were related to before the renovation. Great place for kids to play and amazing gardens. Food was amazing and very friendly staff. The fish ponds were amazing and the kids loved looking at the fish. Loved it!!",
+    "user_id": 6,
+    "restaurant_id": 2
+  },
+  {
+    "review_content": "Good place to eat ,kids  loved the  play aread and food and  watched the beautiful koi fish pond",
+    "user_id": 7,
+    "restaurant_id": 3
+  },
+
+  {
+    "review_content": "Great meal, meeting friends with a 6 yr old child. AWESOME and Emily one of the managers was fantastic. The chicken party was the biggest and best I've had in yrs for $26. Will go back!",
+    "user_id": 8,
+    "restaurant_id": 3
+  },
+
+  {
+    "review_content": "Food was hit and miss. We are a family of 6 with 4 children. Kids were occupied playing and it was a hail mary to the not so good quality meal served on the day. Ambience was pleasent",
+    "user_id": 9,
+    "restaurant_id": 3
+  },
+
+  {
+    "review_content": "What a fantastic place to be. Great ambience. children and grown ups all happy. Children were suffincently occupied  and loved the food. Win- win for the family",
+    "user_id": 10,
+    "restaurant_id": 4
+  },
+
+  {
+    "review_content": "Food was fantastic, loved the food. Children were happy to be occupied in the sand pit with the toys, food went down without a fuss. Will def. go back again",
+    "user_id": 11,
+    "restaurant_id": 4
+  },
+
+  {
+    "review_content": "We caught up with our family. We were 4 families plus grandparents. Picnic tables were a bonus for us all. Lots of fun and laughter. All the children midst our family enjoyed being occupied. Good place to go back on a warm day.",
+    "user_id": 12,
+    "restaurant_id": 5
+  },
+
+  {
+    "review_content": "What a fantastic place to be. Great ambience. children and grown ups all happy. Children were suffincently occupied  and loved the food. Win- win for the family",
+    "user_id": 13,
+    "restaurant_id": 5
+  },
+
+  {
+    "review_content": "Food was fantastic, loved the food. Children were happy to be occupied in the sand pit with the toys, food went down without a fuss. Will def. go back again",
+    "user_id": 14,
+    "restaurant_id": 5
+  },
+
+  {
+    "review_content": "We caught up with our family. We were 4 families plus grandparents. Picnic tables were a bonus for us all. Lots of fun and laughter. All the children midst our family enjoyed being occupied. Good place to go back on a warm day.",
+    "user_id": 15,
+    "restaurant_id": 5
+  }
+]

@@ -1,22 +1,38 @@
 {{!-- Review Format --}}
 
 <div class="box">
-  <div class="content">
-    <h1>{{restaurant.name}}</h1>
-    <p>{{restaurant.description}}</p>
-    
-  <p>Check out <a href="http://{{restaurant.url}}" target="_blank" rel="noopener noreferrer">{{restaurant.name}}</a></p>
-  </div>
+
 
 </div>
+{{!-- Images of restaurant --}}
 
+<div class="column is -8 is-variable">
+  <div class="columns box">
+    <div class="is-6- tablet" style="text-align: center;">
+      <img class="is-square" src="{{restaurant.imgUrl}}">
+    </div>
 
+    <div class="is-6- tablet" style="text-align: center;">
+      <div class="content">
+        <h1>{{restaurant.name}}</h1>
+        <p>{{restaurant.description}}</p>
+
+        <p>Check out <a href="http://{{restaurant.url}}" target="_blank"
+            rel="noopener noreferrer">{{restaurant.name}}</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+{{!-- location --}}
 <div class="column is -8 is-variable">
   <div class="is-7-tablet has-text-centered">
     <h3 class="is-size-4 mb-4 title"> Location </h3>
   </div>
+
+
   {{!-- Maps --}}
-<div id="restaurant-map"></div><br>
+  <div id="restaurant-map"></div><br>
 
 
 
@@ -25,13 +41,37 @@
     <div class="media-content">
       <div class="content">
         <div class="box">
-          <p>
-            <strong>{{review.user.username}}</strong>
-            <br>
-            {{review.review_content}}
-            <br>
-            
-          </p>
+          <div class="columns">
+            <div class="column is-2">
+              <img src="/images/profilepic.png">
+            </div>
+            <div class="column">
+              <strong>{{review.user.username}}</strong>
+              <br>
+              {{review.review_content}}
+              <br>
+              <div class="stars disabled">
+                {{#if review.star_rating}}
+                {{!-- star reviweing for showing stars on each reviewers comment
+                --}}
+                <a class="{{#ifequals review.star_rating
+                  1}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  2}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  3}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  4}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  5}}active{{/ifequals}}">⭐</a>
+                {{/if}}
+              </div>
+              <br>
+              {{!-- for time and date --}}
+              <small>{{format_date review.createdAt}}</small><br>
+              <small>{{format_time review.createdAt}}</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -40,17 +80,33 @@
 
   {{!-- Review Form Section --}}
   <article class="media">
-
     <div class="media-content">
       <form class="review-form">
         <div class="field">
           <div class="box">
+
+            <h1>Leave a review</h1><br>
+
+            {{!-- star rating --}}
+            <div class="stars">
+
+              <a>⭐️</a>
+              <a>⭐️</a>
+              <a>⭐️</a>
+              <a>⭐️</a>
+              <a>⭐️</a>
+
+            </div>
+            {{!-- input for adding a review --}}
+            <input type="hidden" value="0" id="starInput">
             <p class="control">
-              <textarea id="review-content" class="textarea" placeholder="Add a review..."></textarea>
+              <textarea id="review-content" class="textarea" placeholder="Add a
+                review..."></textarea>
             </p>
           </div>
         </div>
-        <input type="hidden" id="restaurant-id" name="restaurantId" value={{restaurant.id}}>
+        <input type="hidden" id="restaurant-id" name="restaurantId"
+          value={{restaurant.id}}>
         <div class="field">
           <div class="box">
             {{#if loggedIn}}
@@ -59,19 +115,22 @@
             </p>
             {{/if}}
             {{#unless loggedIn}}
-            <span> <a href="/login">Login</a> or <a href="/signup">Signup</a> to Post Reviews</span>
+            <span> <a href="/login">Login</a> or <a href="/signup">Signup</a> to
+              Post Reviews</span>
             {{/unless}}
           </div>
 
         </div>
       </form>
     </div>
-</div>
+  </div>
 </article>
-<input type="hidden" id="restaurantlatlng" name="restaurantlatlng" value={{restaurant.mapslatlong}}>
+<input type="hidden" id="restaurantlatlng" name="restaurantlatlng"
+  value={{restaurant.mapslatlong}}>
+<script src="/javascripts/star.js"></script>
 <script src="/javascripts/review.js"></script>
 <script src="/javascripts/map.js"></script>
+
 <script defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAJzW0fLgmyURc6n8p9tzpzcd7MOSiNyA&callback=initRestaurantMap&libraries=&v=weekly"
-      async
-    ></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAJzW0fLgmyURc6n8p9tzpzcd7MOSiNyA&callback=initRestaurantMap&libraries=&v=weekly"
+  async></script>

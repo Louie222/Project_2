@@ -1,7 +1,104 @@
 [
-    {
+    { "id": 1,
       "username": "Sally",
       "email": "sal@hotmail.com",
       "password": "password12345"
+    },
+
+
+    {"id":2,
+      "username": "Bruce",
+      "email": "bruce@hotmail.com",
+      "password": "password12345"
+    },
+
+    { "id": 3,
+      "username": "Mandy",
+      "email": "mandy@hotmail.com",
+      "password": "password12345"
+    },
+
+
+    {"id":4,
+      "username": "Brian",
+      "email": "brian@hotmail.com",
+      "password": "password12345"
+    },
+
+
+
+    {"id":5,
+      "username": "Joey",
+      "email": "joey@hotmail.com",
+      "password": "password12345"
+    },
+
+    { 
+      "id": 6,
+      "username": "Homer",
+      "email": "homer@hotmail.com",
+      "password": "password12345"
+    },
+
+
+    {"id":7,
+      "username": "Maggie",
+      "email": "maggie@hotmail.com",
+      "password": "password12345"
+    },
+
+
+    {"id":8,
+      "username": "Marge",
+      "email": "marge@hotmail.com",
+      "password": "password12345"
+    },
+    { "id": 9,
+      "username": "Tim",
+      "email": "tim@hotmail.com",
+      "password": "password12345"
+    },
+
+
+    {"id":10,
+      "username": "Zac",
+      "email": "zac@hotmail.com",
+      "password": "password12345"
+    },
+
+
+
+    {"id":11,
+      "username": "Emma",
+      "email": "emma@hotmail.com",
+      "password": "password12345"
+    },
+
+    { 
+      "id": 12,
+      "username": "Wendy",
+      "email": "wendy@hotmail.com",
+      "password": "password12345"
+    },
+
+    {"id":13,
+      "username": "Twinks",
+      "email": "twinks@hotmail.com",
+      "password": "password12345"
+    },
+    { "id": 14,
+      "username": "May",
+      "email": "may@hotmail.com",
+      "password": "password12345"
+    },
+
+
+    {"id":15,
+      "username": "Laura",
+      "email": "laura@hotmail.com",
+      "password": "password12345"
     }
+    
 ]
+
+
