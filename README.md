@@ -41,13 +41,13 @@ While browsing through the restaurants, for your amusement, you will be able to 
 
 
 Now, you can make an account with our app by signing up with us, the moment you sign up you will be logged in. 
-<img width="852" alt="8" src="https://user-images.githubusercontent.com/75565115/122635635-af463900-d117-11eb-8df7-1de283a7d6f5.png">
-<img width="872" alt="9" src="https://user-images.githubusercontent.com/75565115/122635639-b1a89300-d117-11eb-8394-851e8588ed67.png">
+9.png<img width="872" alt="9" src="https://user-images.githubusercontent.com/75565115/122636269-ebc76400-d11a-11eb-873c-294d655d9701.png">
+8.png<img width="852" alt="8" src="https://user-images.githubusercontent.com/75565115/122636273-f255db80-d11a-11eb-840b-a1d6c437356e.png">
 
 
 You can view a list of restaurants with the location, type of restaurant it is- e.g. If it is a Café or a Restaurant and if it has an outdoor or indoor play area feature. There is a read more button under each of the restaurant cards. 
+<img width="1350" alt="Gallery" src="https://user-images.githubusercontent.com/75565115/122636849-f800f080-d11d-11eb-8426-ca63d1bd3bd4.png">
 
-<img width="1440" alt="3" src="https://user-images.githubusercontent.com/75565115/122635645-bb31fb00-d117-11eb-9f00-b70c8bfcaf37.png">
 
 When you click on read more, it takes you to the next page. The page now will display the play area of the restaurant displaying a description of the restaurant with the link of the actual restaurant if you want to view the restaurants details. 
 
@@ -56,7 +56,8 @@ When you click on read more, it takes you to the next page. The page now will di
 
 Below, you will be able to find the location on the map.
 
-![Uploading 5.png…]()
+<img width="1440" alt="5" src="https://user-images.githubusercontent.com/75565115/122636856-0818d000-d11e-11eb-91b5-6bb218aeca1e.png">
+
 
 Now you can see the reviews made by customers with star ratings displaying next to it with the date and time stamp.
 
@@ -71,6 +72,8 @@ You can leave reviews in the review section. You can only leave a review if you 
 
 <img width="1433" alt="7" src="https://user-images.githubusercontent.com/75565115/122635811-7d81a200-d118-11eb-839a-75a4accd94d3.png">
 
+Finally a bit about us and contact information
+<img width="1421" alt="10" src="https://user-images.githubusercontent.com/75565115/122636893-3e564f80-d11e-11eb-8dce-0f1e99b5fd88.png">
 
 
 Project Status
