@@ -7,14 +7,23 @@
 #### Technologies 
 
 -Git Hub
+
 -HTML
+
 -Bulma
+
 -CSS
+
 -Java Script
+
 -Node.js and Express.js
+
 -Handlebars.js
+
 -MySQL with Sequelize ORM for the database
+
 -Expression session
+
 -Heroku 
 
 ###### Launch
