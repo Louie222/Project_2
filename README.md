@@ -74,6 +74,6 @@ Finally a bit about us and contact information
 
 Project Status
 
-We are working on implementing a review feature, where users can use filters to narrow down search based on location, update more restaurants, add favourite restaurant, and view it when they have logged in.
+We are working on implementing a few more feature where, users can filter to narrow down search based on location, choose to see highest reviewed restaurants, update more restaurants, click and add a favourite restaurant to their account. 
 
 Licensed @ MIT
