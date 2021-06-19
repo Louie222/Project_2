@@ -1,3 +1,4 @@
+// takes latlong and puts a marker in the map
 function initRestaurantMap() {
     const restaurantlatlng = document.querySelector('#restaurantlatlng').value.trim();
     var latLng = restaurantlatlng.split(',')

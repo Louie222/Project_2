@@ -1,9 +1,12 @@
 
 const router = require("express").Router();
+//importing the review tabel that sequlize converts to models
 const { Review } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // Viewing all reviews
 router.get("/", async (request, response) => {
+  // get all reviews 
   try {
     const reviewData = await Review.findAll({});
     response.status(200).json(reviewData);
@@ -14,7 +17,7 @@ router.get("/", async (request, response) => {
 
 // Add a Review
 
-router.post("/", async (request, response) => {
+router.post("/",withAuth, async (request, response) => {
 
   // create a new Review
   try {
@@ -22,6 +25,7 @@ router.post("/", async (request, response) => {
       review_content: request.body.review_content,
       user_id: request.session.user_id,
       restaurant_id: request.body.restaurant_id,
+      star_rating: request.body.star_rating
     });
     response.status(200).json(reviewData);
   } catch (error) {

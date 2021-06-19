@@ -1,4 +1,4 @@
-// time and condition checks
+// time and condition check helpers for express handlebar
 
 var moment = require('moment');
 

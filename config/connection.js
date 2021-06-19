@@ -1,4 +1,4 @@
-// connect db
+// connect to  database using .env file
 
 const Sequelize = require('sequelize');
 require('dotenv').config();

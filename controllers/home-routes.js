@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Restaurant, Review, User } = require('../models');
 const withAuth = require('../utils/auth');
-
+//GETS all restaurants from the database and redners the homepage along with restaurant data.
 router.get('/', async (req, res) => {
   try {
     const restaurantData = await Restaurant.findAll();
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//finding a selected information and review which was created by the user and returns as a html.
 router.get('/restaurant/:id', async (req, res) => {
   try {
     const restaurantData = await Restaurant.findOne({
@@ -35,7 +35,7 @@ router.get('/restaurant/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//checks if the user is logged in if not takes user to log in page.
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");

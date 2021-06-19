@@ -1,6 +1,7 @@
 
 //  Indexing all routes inside api
 
+//expess router
 const router = require('express').Router();
 
 const userRoutes = require('./user-routes');

@@ -1,3 +1,4 @@
+// gets restaurants id, content, star rating and POST to review api
 const reviewFormHandler = async (event) => {
     event.preventDefault();
     const reviewContent = document.querySelector('#review-content').value.trim();
@@ -15,7 +16,7 @@ const reviewFormHandler = async (event) => {
                     review_content: reviewContent,
                     // converting id into a integer
                     restaurant_id: parseInt(restaurantId),
-                    starRating: starRating
+                    star_rating: starRating
                 }),
                 headers: { 'Content-Type': 'application/json' },
             });

@@ -1,3 +1,4 @@
+// defines tables and relationships between them
 const User = require('./User');
 const Restaurant = require('./Restaurant');
 const Review =require('./Review');

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// CREATE new user
+// CREATE new user -Register
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -25,9 +25,10 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Login
+// Login - use session
 router.post('/login', async (req, res) => {
   try {
+    // 
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
