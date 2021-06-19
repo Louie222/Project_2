@@ -63,19 +63,17 @@ Now you can see the reviews made by customers with star ratings displaying next 
 
 <img width="1440" alt="6" src="https://user-images.githubusercontent.com/75565115/122635730-28459080-d118-11eb-99a1-ab25fafaf8b2.png">
 
-If you choose to write a review and or give a rating, you will need to be sign up or log in.
-
-<img width="1421" alt="10" src="https://user-images.githubusercontent.com/75565115/122635680-ee748a00-d117-11eb-8785-09bedb86f39c.png">
-
-
-You can leave reviews in the review section. You can only leave a review if you have signed up and logged in, but you will be able to view the reviews even without logging in. 
+If you choose to write a review and or give a rating, you will need to be sign up or log in.You can leave reviews in the review section. You can only leave a review if you have signed up and logged in, but you will be able to view the reviews even without logging in. 
 
 <img width="1433" alt="7" src="https://user-images.githubusercontent.com/75565115/122635811-7d81a200-d118-11eb-839a-75a4accd94d3.png">
 
 Finally a bit about us and contact information
+
 <img width="1421" alt="10" src="https://user-images.githubusercontent.com/75565115/122636893-3e564f80-d11e-11eb-8dce-0f1e99b5fd88.png">
 
 
 Project Status
 
 We are working on implementing a review feature, where users can use filters to narrow down search based on location, update more restaurants, add favourite restaurant, and view it when they have logged in.
+
+Licensed @ MIT
