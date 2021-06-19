@@ -1,8 +1,8 @@
 # Project_2
 
-# SUNSHINE FAMILY
+## SUNSHINE FAMILY
 
-## Giggles and Food
+### Giggles and Food
 
 ### Giggles and Food is an application where parents, guardians, and caretakers of young family, (children under 12) can search restaurants with playground and equipment in the Perth Area. It is aimed to make outings and mealtimes a lot more enjoyable.
 
@@ -70,6 +70,12 @@ If you choose to write a review and or give a rating, you will need to be sign u
 Finally a bit about us and contact information
 
 <img width="1421" alt="10" src="https://user-images.githubusercontent.com/75565115/122636893-3e564f80-d11e-11eb-8dce-0f1e99b5fd88.png">
+
+##### Deployed link
+
+##### Repository
+
+##### Heroku
 
 
 Project Status
