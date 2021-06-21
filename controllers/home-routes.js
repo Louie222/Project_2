@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
@@ -26,4 +27,13 @@ router.get('/login', (req, res) => {
   }
 });
 
+// Sign up route
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  } else {
+    res.render('signup');
+  }
+});
 module.exports = router;

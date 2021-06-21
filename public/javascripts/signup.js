@@ -1,16 +1,30 @@
-var button = document.getElementById('button');
-var modal = document.getElementById('page-modal');
-var close = document.getElementsByClassName('modal-close')[0];
 
-button.onclick =function(){
-    modal.style.display ='block';
-}
-close.onclick =function() {
-    modal.style.display="none";
-}
-window.onclick =function(event){
-    console.log(event);
-    if(event.target.className ==='modal-background') {
-        modal.style.display = 'none';
+//   signs up and goes to  log in
+
+const signupFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const username = document.querySelector('#username-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+  
+    if (username && email && password) {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ username, email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/login');
+      } else {
+        alert('Failed to sign up.');
+      }
     }
-}
+  };
+  
+ 
+  
+  document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
