@@ -28,7 +28,7 @@
 
 -Moment Js (library)
 
-- Js avatar(library)
+-Js avatar(library)
 
 -Heroku 
 
