@@ -26,6 +26,10 @@
 
 -Expression session
 
+-Moment Js (library)
+
+- Js avatar(library)
+
 -Heroku 
 
 ##### Launch
