@@ -1,8 +1,15 @@
-
-
+// defines tables and relationships between them
 const User = require('./User');
-
 const Restaurant = require('./Restaurant');
+const Review =require('./Review');
 
-module.exports = { User, Restaurant };
 
+Review.belongsTo(Restaurant);
+
+Review.belongsTo(User);
+
+Restaurant.hasMany(Review);
+
+User.hasMany(Review);
+
+module.exports = { User, Restaurant, Review };

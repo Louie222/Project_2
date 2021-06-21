@@ -10,13 +10,15 @@ const SequelizeStore = require("connect-session-sequelize")(
   );
 
 var path = require('path');
-
+// moment for time and date parsing
+var helpers = require('./utils/helper');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 
 
 const app = express();
-var hbs = exphbs.create({});
+// helper function
+var hbs = exphbs.create({ helpers });
 const port = process.env.PORT || 3000;
 
 // Used to store session data

@@ -1,3 +1,4 @@
+// table for restaurants
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -38,6 +39,16 @@ Restaurant.init(
     description: {
       type: DataTypes.TEXT('long'),
       allowNull: false,
+    },
+
+    imgUrl: {
+      type: DataTypes.STRING,
+      allowNull: true ,
+    },
+
+    mapslatlong: {
+      type: DataTypes.STRING,
+      allowNull: true ,
     }
   },
   {

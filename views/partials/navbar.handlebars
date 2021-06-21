@@ -4,7 +4,7 @@
 <!-- Logo/brand -->
     <div class="navbar-brand">
     <a class="navbar-item">
-    <img src="images/Logo1.png" alt ="Giggles and Food" style="max-height:90px" class="py -2 px-2">
+    <img src="/images/Logo1.png" alt ="Giggles and Food" style="max-height:90px" class="py -2 px-2">
     </a>
     <!-- for hamburger menu -->
     <a class="navbar-burger" id="burger">
@@ -21,8 +21,9 @@
         <a  href="/#aboutUs"class="navbar-item">About us</a>
         <a  href="/#gallery"class="navbar-item">Gallery</a>
         <a  href="/#contact"class="navbar-item">Contact</a>
+        {{!-- If user is  not logged it shows us a sign up and log in button --}}
         {{#unless loggedIn}}
-        <a id="button" class="navbar-item">Sign Up</a>
+        <a href="/signup" id="button" class="navbar-item">Sign Up</a>
         <a href="/login" class="navbar-item">Log In</a>
         {{/unless}}
         {{#if loggedIn}}

@@ -16,8 +16,10 @@
     "express-handlebars": "^5.3.2",
     "express-session": "^1.17.2",
     "hbs": "^4.1.2",
+    "moment": "^2.29.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
+    "save": "^2.4.0",
     "sequelize": "^6.6.2"
   },
   "author": "Sherine Macquart",

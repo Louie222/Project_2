@@ -34,7 +34,7 @@
 
 
 {{!-- search engine --}}
-<nav class="panel">
+{{!-- <nav class="panel">
   <p class="panel-heading">
     Find Resturants
   </p>
@@ -67,7 +67,7 @@
       Reset all filters
     </button>
   </div>
-</nav>
+</nav> --}}
 
 
 <!-- Gallery -->
@@ -79,7 +79,7 @@
   <p class="mb-4 has-text-centered">Here are a list of Resturants. Let the fun begin!.</p>
   </div>
 
-<div class="dropdown">
+{{!-- <div class="dropdown">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
       <span>Sort Order</span>
@@ -110,13 +110,14 @@
       </a>
     </div>
   </div>
-</div>  
+</div>   --}}
 
       {{!-- List of restaurants --}}
  {{#each restaurants as |restaurant|}}
         {{>restaurant-card restaurant}}
         {{/each}}
         
+      
       
 
         {{!-- <section  id="imageGallery" class="columns is-multiline">
@@ -268,7 +269,7 @@
           </div>
         </div> -->
 
-        <div class="section">
+        {{!-- <div class="section">
           <div class="container ">
           <div class= "column is -8 is-variable">
           <div class="is-7-tablet has-text-centered">
@@ -309,16 +310,16 @@
   
           </ul>
           
-        </div>
+        </div> --}}
     
         
-  <!-- Map -->
+  {{!-- <!-- Map -->
   <div class= "column is -8 is-variable">
   <div class="is-7-tablet has-text-centered">
     <h3 class="is-size-4 mb-4 title"> Locations </h3>
  
     <div id="map"></div>
-<br>
+<br> --}}
 
 <!-- About us section -->
         <div class="section">

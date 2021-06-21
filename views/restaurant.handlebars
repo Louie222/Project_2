@@ -1,74 +1,136 @@
+{{!-- Review Format --}}
+
 <div class="box">
- <div class="content">
-  <h1>{{restaurant.name}}</h1>
-  
-  <h6>Sixth level</h6>
-  <p>{{restaurant.description}}</p>
-</div>
-</div>
 
-<article class="media">
-  
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Barbara Middleton</strong>
-        <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
-        <br>
-        <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-      </p>
+
+</div>
+{{!-- Images of restaurant --}}
+
+<div class="column is -8 is-variable">
+  <div class="columns box">
+    <div class="is-6- tablet" style="text-align: center;">
+      <img class="is-square" src="{{restaurant.imgUrl}}">
     </div>
 
-    <article class="media">
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong>Sean Brown</strong>
-            <br>
-            Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
-            <br>
-            <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-          </p>
-        </div>
+    <div class="is-6- tablet" style="text-align: center;">
+      <div class="content">
+        <h1>{{restaurant.name}}</h1>
+        <p>{{restaurant.description}}</p>
 
-        <article class="media">
-          Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
-        </article>
-
-        <article class="media">
-          Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
-        </article>
+        <p>Check out <a href="http://{{restaurant.url}}" target="_blank"
+            rel="noopener noreferrer">{{restaurant.name}}</a></p>
       </div>
-    </article>
 
-    <article class="media">
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong>Kayli Eunice </strong>
-            <br>
-            Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
-            <br>
-            <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
-          </p>
-        </div>
-      </div>
-    </article>
-  </div>
-</article>
-
-<article class="media">
-  <div class="media-content">
-    <div class="field">
-      <p class="control">
-        <textarea class="textarea" placeholder="Add a comment..."></textarea>
-      </p>
-    </div>
-    <div class="field">
-      <p class="control">
-        <button class="button">Post comment</button>
-      </p>
     </div>
   </div>
+</div>
+{{!-- location --}}
+<div class="column is -8 is-variable">
+  <div class="is-7-tablet has-text-centered">
+    <h3 class="is-size-4 mb-4 title"> Location </h3>
+  </div>
+
+
+  {{!-- Maps --}}
+  <div id="restaurant-map"></div><br>
+
+
+
+  {{#each restaurant.reviews as |review|}}
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <div class="box">
+          <div class="columns">
+            <div class="column is-2">
+              <img src="/images/profilepic.png">
+            </div>
+            <div class="column">
+              <strong>{{review.user.username}}</strong>
+              <br>
+              {{review.review_content}}
+              <br>
+              <div class="stars disabled">
+                {{#if review.star_rating}}
+                {{!-- star reviweing for showing stars on each reviewers comment
+                --}}
+                <a class="{{#ifequals review.star_rating
+                  1}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  2}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  3}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  4}}active{{/ifequals}}">⭐</a>
+                <a class="{{#ifequals review.star_rating
+                  5}}active{{/ifequals}}">⭐</a>
+                {{/if}}
+              </div>
+              <br>
+              {{!-- for time and date --}}
+              <small>{{format_date review.createdAt}}</small><br>
+              <small>{{format_time review.createdAt}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  {{/each}}
+
+  {{!-- Review Form Section --}}
+  <article class="media">
+    <div class="media-content">
+      <form class="review-form">
+        <div class="field">
+          <div class="box">
+
+            <h1>Leave a review</h1><br>
+
+            {{!-- star rating --}}
+            <div class="stars">
+
+              <a>⭐️</a>
+              <a>⭐️</a>
+              <a>⭐️</a>
+              <a>⭐️</a>
+              <a>⭐️</a>
+
+            </div>
+            {{!-- input for adding a review --}}
+            <input type="hidden" value="0" id="starInput">
+            <p class="control">
+              <textarea id="review-content" class="textarea" placeholder="Add a
+                review..."></textarea>
+            </p>
+          </div>
+        </div>
+        <input type="hidden" id="restaurant-id" name="restaurantId"
+          value={{restaurant.id}}>
+        <div class="field">
+          <div class="box">
+            {{#if loggedIn}}
+            <p class="control">
+              <button class="button" type="submit">Post comment</button>
+            </p>
+            {{/if}}
+            {{#unless loggedIn}}
+            <span> <a href="/login">Login</a> or <a href="/signup">Signup</a> to
+              Post Reviews</span>
+            {{/unless}}
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
 </article>
+<input type="hidden" id="restaurantlatlng" name="restaurantlatlng"
+  value={{restaurant.mapslatlong}}>
+<script src="/javascripts/star.js"></script>
+<script src="/javascripts/review.js"></script>
+<script src="/javascripts/map.js"></script>
+
+<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAJzW0fLgmyURc6n8p9tzpzcd7MOSiNyA&callback=initRestaurantMap&libraries=&v=weekly"
+  async></script>

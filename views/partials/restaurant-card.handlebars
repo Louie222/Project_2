@@ -1,37 +1,26 @@
 <div class='container has-text-centered'>
-          <div class='columns is-mobile is-flex is-0-mobile is-0-tablet is-0-widescreen is-centered'>
+          <div style ="margin-top:20px" class='columns is-mobile is-flex is-0-mobile is-0-tablet is-0-widescreen is-centered'>
             <div class='column is-12'>
               <div class="box">
                 <article class="media">
                   <div class="media-left">
                     <figure class="image is-128x128">
-                      <img class='is-square' src="images/300Acres.jpeg">
+                      <img class='is-square' src="{{imgUrl}}">
                     </figure>
                   </div>
                   <div class="media-content">
                     <div class="content">
                       <p>
-                        <strong>{{name}}</strong>
-                        <small>Cruisine:Pub Food</small>
+                        <strong>{{name}}</strong><br>
+                        
                         <small></small>
                         <br>
                         {{shortDescription}}
                       </p>
                     </div>
-                    <nav class="level is-mobile">
-                      <div class="level-left">
-                        <a class="level-item">
-                          <span class="icon is-small">
-                            <i class="fas fa-reply"></i>
-                          </span>
-                        </a>
-
-                        <a class="level-item">
-                          <span class="icon is-small">
-                            <i class="fas fa-heart"></i>
-                          </span>
-                        </a>
-                        <span class="tag is-dark">Read More</span>
+                    <br>
+                        
+                        <a href="/restaurant/{{id}}"><span class="tag is-dark">Read More</span></a>
                       </div>
                     </nav>
                   </div>

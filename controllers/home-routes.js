@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { Restaurant } = require('../models');
+const { Restaurant, Review, User } = require('../models');
 const withAuth = require('../utils/auth');
-
+//GETS all restaurants from the database and redners the homepage along with restaurant data.
 router.get('/', async (req, res) => {
   try {
     const restaurantData = await Restaurant.findAll();
@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
@@ -27,7 +26,7 @@ router.get('/login', (req, res) => {
   }
 });
 
-// Sign up route
+
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
@@ -36,4 +35,4 @@ router.get('/signup', (req, res) => {
     res.render('signup');
   }
 });
-module.exports = router;
+
