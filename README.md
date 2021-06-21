@@ -86,5 +86,5 @@ Project Status
 
 We are working on implementing a few more feature where, users can filter to narrow down search based on location, choose to see highest reviewed restaurants, update more restaurants, click and add a favourite restaurant to their account. 
 
-Licensed @ MIT
+##### Licensed @ MIT
 =======
