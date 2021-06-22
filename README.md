@@ -4,7 +4,7 @@
 
 ### Giggles and Food
 
-#### Giggles and Food is an application where parents, guardians, and caretakers of young family, (children under 12) can search restaurants with playground and equipment in the Perth Area. It is aimed to make outings and mealtimes a lot more enjoyable.
+### Giggles and Food is an application where parents, guardians, and caretakers of young family, (children under 12) can search restaurants with playground and equipment in the Perth Area. It is aimed to make outings and mealtimes a lot more enjoyable.
 
 #### Technologies 
 
