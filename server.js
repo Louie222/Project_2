@@ -48,7 +48,7 @@ app.use(routes);
 // sync db and server
 sequelize.sync({force:false}).then(()=>{
     app.listen(port, ()=> {
-        console.log('Giggle and food server started at port'+port)
+        console.log('Giggle and food server started at port')
     });
 }).catch((err)=> {
     console.log(err);
