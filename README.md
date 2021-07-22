@@ -77,9 +77,9 @@ Finally a bit about us and contact information
 
 ##### Deployed link
 
-##### Repository
+##### Repository Link
 
-##### Heroku
+##### Heroku Link
 
 
 Project Status
