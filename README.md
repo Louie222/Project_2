@@ -76,6 +76,7 @@ Finally a bit about us and contact information
 <img width="1421" alt="10" src="https://user-images.githubusercontent.com/75565115/122636893-3e564f80-d11e-11eb-8dce-0f1e99b5fd88.png">
 
 ##### Deployed link
+https://github.com/Louie222/Project_2
 
 ##### Repository Link
 https://github.com/Louie222/Project_2
