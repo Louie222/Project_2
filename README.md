@@ -80,6 +80,7 @@ Finally a bit about us and contact information
 ##### Repository Link
 
 ##### Heroku Link
+https://gigglesandfood.herokuapp.com/
 
 
 Project Status
