@@ -78,11 +78,12 @@ Finally a bit about us and contact information
 ##### Deployed link
 
 ##### Repository Link
-
+https://github.com/Louie222/Project_2
 ##### Heroku Link
 https://gigglesandfood.herokuapp.com/
 
-
+Presenation slide
+https://1drv.ms/p/s!AooBbHXxl68vgRIwGWVy1j_W4QVq
 Project Status
 
 We are working on implementing a few more feature where, users can filter to narrow down search based on location, choose to see highest reviewed restaurants, update more restaurants, click and add a favourite restaurant to their account. 
